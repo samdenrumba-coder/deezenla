@@ -1,0 +1,23 @@
+button{
+    position: absolute;
+    width: 150px;
+    height: inherit;
+    color: rgb(37, 0, 248);
+    font-weight: 700;
+    border-radius: 30px;
+    border: 2px solid  rgb(7, 2, 101);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px black;
+}
+
+button:nth-child(1) {
+
+    margin-left: -200px;
+    background: rgb(220, 225, 245);
+}
+button:nth-child(2) {
+    margin-right: -200px;
+    background:  beige;
+    
+}
