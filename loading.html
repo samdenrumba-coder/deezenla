@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>ShaneGwapa</title>
+</head>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: cursive;
+            background-color: rgba(20, 2, 106, 0.405);
+        .head{
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(3, 4, 93);
+            letter-spacing: 5px;
+            margin-top: -400px;
+        }
+        .wrapper{
+          width: 500px;
+          height: 300px;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          border-radius: 50px;
+          box-shadow: 0 30px 50px #00144b;
+          background-position: 50% 50%;
+          background-size: cover;
+          display: inline-block;
+        }
+        .btn-group{
+            position: absolute;
+            width: 100%;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: -120px;
+        }
+        .question{
+            font-size: 2rem;
+             color:rgb(35, 2, 90);
+             letter-spacing: 5px;
+             font-family: cursive;
+             text-align: center;
+             text-transform: capitalize;
+             margin-bottom: 135px;
+             position: relative;
+             top: 85px;
+        }
+        }
+        .hearts{
+            font-size: 23px;
+            font-weight: bold;
+            position: fixed;
+            transform: translateY(0%);
+            top: -1vh;
+            left: 0;
+            animation: fall 1s ease-in infinite;
+        }
+        @keyframes fall {
+            to{
+                transform: translateY(250vh);
+            }
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <h1 class="head">Hi Baby!</h1>
+        <div class="wrapper">
+            <h2 class="question">Do You Want to <br> Go on a Date?</h2>
+            <div class="btn-group">
+                <button class="yes-btn">Yes</button>
+                <button class="no-btn">Dakpa</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="src/js/main.js"></script>
+</body>
+
+<script>
+
+    function hearts(){
+        
+        const container = document.querySelector('.container');
+
+        const creat = document.createElement('div');
+        creat.classList.add('hearts');
+        creat.innerHTML = '💜'
+        container.appendChild(creat)
+        setTimeout(() => {
+                    creat.remove();
+        }, 3000);
+
+        creat.style.left = Math.random() * 100 + 'vw';
+        creat.style.animationDuration = Math.random()* 2 + 3 + 's';
+    }
+    
+
+
+    setInterval(hearts, 100); 
+
+</script>
+
+</html>
